@@ -1,2 +1,1 @@
-# Bruh-Chat
-(Chatting app)
+# Chattapp
