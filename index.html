@@ -1,16 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
-        <meta charset="UTF-8">
         <title> Chatting app
         </title>
-        <link rel="shortcut icon" href="fav icon.png" type="image/x-icon">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
         <script src="http://code.jquery.com/jquery-latest.min.js"></script>
         <script src="/socket.io/socket.io.js"></script>
-        
-<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
-        <i class="em em-some-emoji"></i>
         <!--Start of Zendesk Chat Script-->
 <script type="text/javascript">
 window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
@@ -23,90 +17,68 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
         <style>
             body{
                 margin-top: 50px;
-                background-color:lightgrey;
+                background-color:black;
             }
             #messageArea{
-                display: none;
-            }
-            .red{
-                color: red;
+                
+               display: none;
             }
             h1{
             
-                color: silver;
-                text-shadow:white 2px 2px 0px 3px;
-                background-color: whitesmoke;
+                color: black;
+                text-shadow:white 2px 2px 0px 0px;
+                background-color: red;
                 border:solid 1px ;
-                border-color: ghostwhite;
+                border-color: lightcoral;
                 text-align: center;
                 margin: 100px;
                 border-radius: 5px;
                 font-style: italic;
                 font-style: oblique;
-                font-family: cursive;
             }
-           
+            h1:hover{
+            
+                color: lightcoral;
+                border:solid 1px ;
+                border-color: aquamarine;
+                background-color: gold;
+                text-align: center;
+                margin: 100px;
+                
+            
+            }
 
             .chat{
                 height: 250px;
                 
-                overflow-y: scroll;
+                overflow: scroll;
                 display: grid;
                 
                 
             }
             /*chat background and color*/
             .zebra{
-                background-color: white;
-                color: brown;
-                
-            }
-            .embedg{
-                margin: 0 100px;
-            }
-            .mod{
-                color: gold;
-                background-color: cornsilk;
-            }
-            .username-font{
-                font-size: 20px;
+                background-color: dimgrey
             }
             label{
-                color: dodgerblue;
+                color: gainsboro;
             }
             .greenyellow{
-                background-color:white;
-                border-color:ghostwhite;
+                background-color:goldenrod;
+                border-color: sandybrown;
             }
             h3{
                 color: green
             }
-            
             li{
                 color: red;
             }
-            
-            
-            ::-webkit-scrollbar {
-    width: 12px;
-}
- 
-::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
-    border-radius: 10px;
-}
- 
-::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
-}
         </style>
     </head>
     <body>
         <h1>
-            Welcome to Bruh Chat
+            Welcome to Dream Chat Space
         </h1>
-        s
         <div class="container ">
             <div id="userFormArea" class="row">
                 <div class="col-md-12">
@@ -115,7 +87,7 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
                             <label>Enter Username:</label>
                             <input class="form-control greenyellow" id="userName" placeholder="please enter your username"/>
                             <br />
-                            <input type="submit" class="btn btn-primary" value="Login"/>
+                            <input type="submit" class="btn btn-primary greenyellow" value="Login"/>
                             
                         </div>
                     </form>
@@ -138,32 +110,23 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
                             <label>Enter a message</label>
                             <textarea class="form-control greenyellow" id="message" placeholder="please enter your message here"></textarea>
                             <br />
-                            <input type="submit" class="btn btn-primary " value="send message"/>
-                            <br>
-                            <br>
-<iframe src="http://www.appsgeyser.com/social_widget/social_widget.php?width=300&height=160&apkName=Bruh Chat_4738126&simpleVersion=no" width="310" height="180" vspace="0" hspace="0" frameborder="no" scrolling="no" seamless="" allowtransparency="true"></iframe>                            
+                            <input type="submit" class="btn btn-primary greenyellow" value="send message"/>
+                            
                         </div>
                     </form>
-
                 </div>
             </div>
         </div>
-            </div>    <!-- Place this code where you'd like the game to appear -->
-        <!--
-<div class="miniclip-game-embed" data-game-name="tanxio" data-theme="0" data-width="1200" data-height="800" data-language="en"><a href="http://www.miniclip.com/games/tanxio/">Play Tanx.io</a></div>
-<p style="text-align:center;"><a href="http://www.miniclip.com/games/tanxio/" target="_blank">Play Tanx.io</a> / More <a href="http://www.miniclip.com/games/genre-1320/" target="_blank">IO Games games</a></p>
--->
-<!-- Insert this code before your </body> tag -->
-<script src="//static.miniclipcdn.com/js/game-embed.js"></script>
+        </div>    
         <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.js"></script>
-        
-       <!-- Place this code where you'd like the game to appear -->
-<!--<div class="miniclip-game-embed" data-game-name="total-wreckage" data-theme="0" data-width="680" data-height="510" data-language="en"><a href="http://www.miniclip.com/games/total-wreckage/">Play Total Wreckage</a></div>
-<p style="text-align:center;"><a href="http://www.miniclip.com/games/total-wreckage/" target="_blank">Play Total Wreckage</a> / More <a href="http://www.miniclip.com/games/genre-1143/" target="_blank">Destruction games</a></p>
--->
-<!-- Insert this code before your </body> tag -->
-<script src="//static.miniclipcdn.com/js/game-embed.js"></script>
         <script>
+            $(document).ready(function() {
+    $("#field").keyup(function(e) {
+        if(e.keyCode == 13) {
+            sendMessage();
+        }
+    });
+});     
             $(function(){
                 var socket = io.connect();  
                 var $messageForm = $('#messageForm');
@@ -175,57 +138,22 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
                 var $users = $('#users');
                 var $userName = $('#userName');
                 
-                    $messageForm.keyup(function(e){
-                    if(e.keyCode == 13){
+                $messageForm.submit(function(e){
                     e.preventDefault();
                     socket.emit('send message',$message.val());
                     $message.val('');
-                        }
-                    });
-                        
-                    $messageForm.submit(function(e){
-                    e.preventDefault();
-                    socket.emit('send message',$message.val());
-                    $message.val('');
-                        
                 });
-       
-                        var owner = '(Owner) Diaa',admin='Mostafa(Admin)',password= prompt('please enter your password if you are a mod or admin if you aint press okay Thanks ;)');
                 
-                    socket.on('new message',function(data){
-                        
-                        if (data.user == owner || data.user== admin)
-                            {
-                            
-                            if(password == 336933){
-                                switch(data.user){
-                                case '(Owner) Diaa':
-                             $chat.append('<div class="well mod"><strong> <span class="username-font ">'+data.user+'</span>:</strong>'+data.msg+'</div>');
-                                break;
-                                case 'Mostafa(Admin)':
-                             $chat.append('<div class="well mod"><strong> <span class="username-font ">'+data.user+'</span>:</strong>'+data.msg+'</div>');
-                                break;
-                                default:$chat.append('<div class="well mod"><strong> <span class="username-font ">'+data.user+'</span>:</strong>'+data.msg+'</div>');
-                                    break;
-                                            }
-                                
-                                }
-                            else
-                                    $chat.append('<div class="well zebra"><strong> <span class="username-font ">'+data.user+'</span>:</strong>'+data.msg+'</div>');
-                                    
-                                
-                                
-                            }
-                          else
-                                  $chat.append('<div class="well zebra"><strong> <span class="username-font ">'+data.user+'</span>:</strong>'+data.msg+'</div>');
-                            });
-                    
-                    
-                    $userForm.submit(function(e){
+                
+                socket.on('new message',function(data){
+                    $chat.append('<div class="well zebra"><strong>'+data.user+':</strong>'+data.msg+'</div>')
+                });
+                
+                $userForm.submit(function(e){
                     window.setInterval(function() {
   var elem = document.getElementById('chat');
   elem.scrollTop = elem.scrollHeight;
-}, 2500);
+}, 5000);
                     e.preventDefault();
                     socket.emit('new user',$userName.val(),function(data){
                         if (data){
@@ -236,16 +164,16 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
                     $userName.val('');
                     
                 });
-                    socket.on('get users',function(data){
+                
+                socket.on('get users',function(data){
                     var html = '';
                     for(i = 0 ;i < data.length;i++){
-                        html += '<li class=list-group-item red">'+data[i]+'</li>';
+                        html += '<li class=list-group-item">'+data[i]+'</li>';
                     }
                     $users.html(html);
                 });
-                            
                 
-            
+            });
             
             function reconnect() {
     console.log('Connection lost, trying to reconnect...');
@@ -267,9 +195,8 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
         }
     });
 }
-            });
             
-  </script>
+        </script>
         
     </body>
 </html>
