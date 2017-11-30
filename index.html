@@ -4,19 +4,11 @@
         </title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
         <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-        <script src="/socket.io/socket.io.js"></script>
-        
+      
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.js"></script>
 <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
         <i class="em em-some-emoji"></i>
-        <!--Start of Zendesk Chat Script-->
-<script type="text/javascript">
-window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
-d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
-_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
-$.src="https://v2.zopim.com/?4gLwOK09nYiW8NH98qZ5QlX2blfix1HU";z.t=+new Date;$.
-type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
-</script>
-<!--End of Zendesk Chat Script-->
+      
         <style>
             body{
                 margin-top: 50px;
@@ -120,7 +112,7 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
             </div>
         </div>
         </div>    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.js"></script>
+       
         <script>
   
             $(function(){
@@ -181,23 +173,7 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
                 
             });
             
-            function reconnect() {
-    console.log('Connection lost, trying to reconnect...');
-    $.ajax({
-        url:dreamchatspace.azurewebsites.net,
-        success: function() {
-            //Server is back online
-            socket = new WebSocket(myUrl);
-            socket.onerror = onErrorHandler;
-            socket.onmessage = onMessageHandler;
-            socket.onopen = onOpenHandler;
-            socket.onclose = onCloseHandler;
-        },
-        error: function() {
-            //Server is still down
-            setTimeout(function() {
-                reconnect();
-            }, 1000);
+          
         }
     });
 }
