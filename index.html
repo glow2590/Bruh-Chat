@@ -1,3 +1,21 @@
+Skip to content
+This repository
+Search
+Pull requests
+Issues
+Marketplace
+Explore
+ @glow2590
+ Sign out
+ Watch 0
+  Unstar 1  Fork 0 glow2590/Chattapp
+ Code  Issues 0  Pull requests 0  Projects 0  Wiki  Insights  Settings
+Tree: d2a5de31fc Find file Copy pathChattapp/index.html
+d2a5de3  on Mar 25
+ diaa mohamed added .
+0 contributors
+RawBlameHistory      
+209 lines (181 sloc)  7.13 KB
 <html>
     <head>
         <title> Chatting app
@@ -5,6 +23,9 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
         <script src="http://code.jquery.com/jquery-latest.min.js"></script>
         <script src="/socket.io/socket.io.js"></script>
+        
+<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+        <i class="em em-some-emoji"></i>
         <!--Start of Zendesk Chat Script-->
 <script type="text/javascript">
 window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
@@ -47,7 +68,6 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
                 
             
             }
-
             .chat{
                 height: 250px;
                 
@@ -120,13 +140,7 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
         </div>    
         <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.js"></script>
         <script>
-            $(document).ready(function() {
-    $("#field").keyup(function(e) {
-        if(e.keyCode == 13) {
-            sendMessage();
-        }
-    });
-});     
+  
             $(function(){
                 var socket = io.connect();  
                 var $messageForm = $('#messageForm');
@@ -138,10 +152,20 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
                 var $users = $('#users');
                 var $userName = $('#userName');
                 
-                $messageForm.submit(function(e){
+                $messageForm.keyup(function(e){
+                    if(e.keyCode == 13){
                     e.preventDefault();
                     socket.emit('send message',$message.val());
                     $message.val('');
+                        }
+                });
+                        
+                $messageForm.submit(function(e){
+                    
+                    e.preventDefault();
+                    socket.emit('send message',$message.val());
+                    $message.val('');
+                        
                 });
                 
                 
@@ -153,7 +177,7 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
                     window.setInterval(function() {
   var elem = document.getElementById('chat');
   elem.scrollTop = elem.scrollHeight;
-}, 5000);
+}, 2500);
                     e.preventDefault();
                     socket.emit('new user',$userName.val(),function(data){
                         if (data){
@@ -200,3 +224,15 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
         
     </body>
 </html>
+© 2017 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+API
+Training
+Shop
+Blog
+About
