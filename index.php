@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title> Chatting app
+        <title> Chatting apps
         </title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
         <script src="http://code.jquery.com/jquery-latest.min.js"></script>
