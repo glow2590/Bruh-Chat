@@ -70,8 +70,7 @@
         </style>
     </head>
     <body>
-        <h1>
-            Welcome to Dream Chat Space
+        <h1>diaa
         </h1>
         <div class="container ">
             <div id="userFormArea" class="row">
